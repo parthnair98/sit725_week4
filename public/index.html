@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper navbar-size">
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                </ul>
+                <a href="#" class="brand-logo right"><img class="user-image-size" src="images/user.jpg" height="30" alt="Logo" /></a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid d-flex" style="height: 100vh;">
+        <section class="row flex-container">
+            <div class="col s12 content-center">
+                <div class="center-content">
+                    <h1>SIT725 Week 4</h1>
+                    <p class="custom-gap">
+                        This is an application in which we try to use a few components from Materialize and through this practical we try to have some fun.
+                    </p>
+                    <a id="clickMeButton" class="waves-effect waves-red btn">Welcome</a>
+                </div>
+                <div class="side-by-side">
+                    <img src="images/maths.jpg" alt="Right Image" class="responsive-img small-image materialboxed">
+                    <div class="content-left">
+                        <a id="multiplyButton" class="waves-effect waves-purple btn">Get Multiplication Table</a> 
+                        <div id="resultContainer" class="text"></div>
+                    </div>
+                </div>
+                <div class="center-content">
+                    <button id="leaveReviewButton" class="btn">Leave a Review</button>
+                </div>
+                <div id="reviewCardsContainer" class="review-cards"></div>
+            </div>
+        </section>
+    </main>
+
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <h4>Submit a Review</h4>
+            <input type="text" id="firstName" placeholder="First Name" />
+            <input type="text" id="lastName" placeholder="Last Name" />
+            <textarea id="reviewText" placeholder="Your Review"></textarea>
+            <div class="stars">
+                <span class="rating-text">Rating:</span>
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+            <button id="submitReviewButton" class="btn">Submit Review</button>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

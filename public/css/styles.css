@@ -1,0 +1,134 @@
+/* Existing styles */
+nav {
+    background-color: #d38ce7;
+}
+
+.nav-wrapper {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+#nav-mobile {
+    display: flex;
+    align-items: center;
+}
+
+#nav-mobile li {
+    margin-left: 20px;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    margin-left: auto;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #e0b0ee;
+}
+
+.container.content {
+    text-align: center;
+}
+
+.content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    height: 100%;
+}
+
+.center-content {
+    text-align: center;
+}
+
+.side-by-side {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.responsive-img {
+    height: auto;
+    max-width: 100%;
+}
+
+.small-image {
+    width: 250px;
+    height: auto;
+}
+
+/* New styles for star ratings */
+.stars {
+    display: inline-flex;
+    align-items: center;
+}
+
+.rating-text {
+    margin-right: 10px; /* Space between text and stars */
+}
+
+.star {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #d3d3d3; /* Light gray for empty stars */
+    transition: color 0.2s; /* Smooth color transition */
+}
+
+.star.selected, .star:hover {
+    color: #ffc107; /* Yellow for selected/hovered stars */
+}
+
+.modal {
+    max-width: 600px;
+}
+
+.modal-content {
+    padding-bottom: 20px;
+}
+
+/* Styles for review cards */
+.review-cards {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.review-cards .card {
+    flex: 1 1 calc(33% - 20px);
+    max-width: calc(33% - 20px);
+    box-sizing: border-box;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .review-cards .card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .review-cards .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+#leaveReviewButton {
+    margin-top: 40px;
+}
