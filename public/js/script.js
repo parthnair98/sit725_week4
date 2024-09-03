@@ -2,6 +2,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize the modal
     M.Modal.init(document.querySelectorAll('.modal'));
 
+     // Socket.io client-side code
+     const socket = io();
+
+     // Handle receiving the random number
+     socket.on('randomNumber', (number) => {
+        console.log('randomNumber event received');
+        const randomNumberElement = document.getElementById('randomNumber');
+        if (randomNumberElement) {
+            console.log(`Received random number: ${number}`);
+            randomNumberElement.textContent = `Random Number: ${number}`;
+        } else {
+            console.error('Element with ID "randomNumber" not found.');
+        }
+    });
+    
+
+   
     document.getElementById('clickMeButton').addEventListener('click', function() {
         const now = new Date();
         const dateTimeString = `Date: ${now.toLocaleDateString()} Time: ${now.toLocaleTimeString()}`;
